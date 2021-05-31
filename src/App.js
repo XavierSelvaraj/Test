@@ -1,0 +1,27 @@
+import "./App.css";
+import First from "./First";
+import Second from "./Second";
+import { useCallback, useState } from "react";
+
+function App() {
+  const [count, setCount] = useState(0);
+  const [secondCount, setSecondCount] = useState(0);
+  const onHandleChange = useCallback(() => {
+    console.log("handled event first");
+    setCount((c) => c + 1);
+  }, []);
+
+  const onHandleSecondChange = useCallback(() => {
+    console.log("handled event second");
+    setSecondCount((c) => c + 1);
+  }, []);
+
+  return (
+    <>
+      <First count={count} onHandleChange={onHandleChange} />
+      <Second count={secondCount} onHandleSecondChange={onHandleSecondChange} />
+    </>
+  );
+}
+
+export default App;
