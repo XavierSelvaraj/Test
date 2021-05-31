@@ -13,6 +13,7 @@ function App() {
 
   const onHandleSecondChange = useCallback(() => {
     console.log("handled event second");
+    console.log("added new log");
     setSecondCount((c) => c + 1);
   }, []);
 
