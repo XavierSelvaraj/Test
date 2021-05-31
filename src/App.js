@@ -9,6 +9,7 @@ function App() {
   const onHandleChange = useCallback(() => {
     console.log("handled event first");
     console.log("added from main");
+    console.log("added from custom branch");
     setCount((c) => c + 1);
   }, []);
 
