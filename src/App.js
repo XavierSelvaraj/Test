@@ -8,6 +8,7 @@ function App() {
   const [secondCount, setSecondCount] = useState(0);
   const onHandleChange = useCallback(() => {
     console.log("handled event first");
+    console.log("added from main");
     setCount((c) => c + 1);
   }, []);
 
